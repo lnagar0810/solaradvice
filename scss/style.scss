@@ -1,0 +1,336 @@
+@import "mixins";
+
+* {
+  //box-shadow: 0 0 1px 1px rgba(255,0,0,0.5);
+}
+#ywraq_checkout_quote_btn {
+  background: transparent;
+  border: 2px solid $black;
+  margin: 20px 0;
+  color: $black;
+  @include border-radius(50px);
+  width: 100%;
+  text-align: center;
+  display: block;
+  font-size: 18px;
+  font-weight: 400;
+  padding: 10px 0;
+  @include phone {
+    font-size: 16px;
+    padding-top: 10px;
+    padding-bottom: 6px;
+    padding-left: 0;
+    padding-right: 0;
+    margin: 10px 0;
+  }
+  &:hover {
+    background: $black;
+    color: white;
+  }
+}
+.close-quote-gen-overlay {
+  position: absolute;
+  right: 22px;
+  top: 14px;
+  z-index: 200;
+  font-size: 25px;
+  padding: 0 10px;
+  cursor: pointer;
+  @include phone {
+    right: 10px;
+  }
+}
+.quote-gen-overlay {
+  z-index: 100;
+  top: 15px;
+  left: 20%;
+  background: white;
+  padding: 30px;
+  width: 800px;
+  height: 95%;
+  position: fixed;
+  overflow: scroll;
+  @include border-radius(10px);
+  @include box-shadow(0 3px 7px 0 rgba(2, 2, 2, 0.5));
+  @include tablet {
+    width: auto;
+    left: 10px;
+    right: 10px;
+    padding: 10px 15px 35px 15px;
+    height: 80%;
+  }
+  @include phone {
+    top: 40px;
+  }
+  h1 {
+    font-family: $font-family;
+    font-size: 18px;
+    color: $black;
+  }
+  h2 {
+    font-family: $font-family;
+    color: $black;
+    margin-top: 0;
+    margin-bottom: 3px;
+    @include phone {
+      margin: 10px 0 0;
+      font-size: 16px;
+    }
+  }
+  h3 {
+    margin-top: 0;
+    margin-bottom: 0;
+    @include phone {
+      margin: 10px 0 20px;
+      font-size: 14px;
+    }
+  }
+  h4 {
+    @include phone {
+      margin: 10px 0;
+      font-size: 14px;
+    }
+  }
+  hr {
+    margin-bottom: 20px;
+    background-color: $grey;
+  }
+  p.subline {
+    margin: 0 0 20px;
+    font-size: 14px;
+    @include phone {
+      margin: 0 0 10px;
+    }
+  }
+  .poduct-quote-container {
+    display: grid;
+    grid-template-columns: 20% auto;
+    column-gap: 15px;
+    margin-bottom: 20px;
+    @include phone {
+      margin: 0 0 10px;
+    }
+    .product-quote-items {
+      h5 {
+        font-family: $font-family;
+        font-size: 12px;
+        color: $black;
+        text-transform: uppercase;
+        font-weight: bold;
+        @include phone {
+          margin-bottom: 5px;
+        }
+      }
+      .display-list-link {
+        background: $pale-bg-blue;
+        font-weight: bold;
+        display: inline-block;
+        color: $blue;
+        font-size: 12px;
+        padding: 2px 16px;
+        margin: 10px 0;
+        cursor: pointer;
+        @include border-radius(15px);
+      }
+      ul {
+        list-style-type: none;
+        height: 90px;
+        overflow-y: hidden;
+        margin-left: 0;
+        margin-bottom: 0;
+        @include phone {
+          height: 39px;
+        }
+        &.open {
+          height: auto;
+        }
+        li {
+          font-size: 13px;
+          line-height: 18px;
+        }
+      }
+    }
+  }
+  .col {
+    grid-template-columns: 50% auto;
+    @include phone {
+      display: block;
+      margin: 0;
+    }
+    label.suburb {
+      @include phone {
+        display: none;
+      }
+    }
+    &.second-section {
+      margin-bottom: 30px;
+      label {
+        display: none;
+      }
+    }
+    &.radio-area {
+      grid-template-columns: 25% auto;
+      width: 50%;
+      @include phone {
+        display: grid;
+        grid-template-columns: auto auto auto;
+      }
+      input[type="radio"] {
+        float: left;
+      }
+      label {
+        width: 60px;
+      }
+    }
+    .cell {
+      padding: 0;
+      margin-left: 0;
+      @include phone {
+        margin-bottom: 10px;
+      }
+      h3 {
+        margin-top: 0;
+        margin-bottom: 0;
+        font-size: 16px;
+        @include phone {
+          margin: 10px 0 20px;
+          font-size: 14px;
+        }
+      }
+    }
+  }
+  form {
+    margin-bottom: 0;
+    input[type="text"],
+    input[type="email"],
+    select {
+      border: 0;
+      position: relative;
+      @include border-radius(30px);
+      @include box-shadow(none);
+      background: $light-grey;
+      font-size: 13px;
+      padding: 10px 10px 10px 22px;
+      outline: none;
+      width: 356px;
+      height: initial;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      text-indent: 1px;
+      text-overflow: "";
+      @include fablet {
+        width: 100%;
+      }
+      &:hover {
+        transition: all 400ms cubic-bezier(0.4, 0, 0.2, 1);
+        border-color: $grey;
+      }
+      &#bill {
+      }
+      &#province {
+        &:before {
+          content: "";
+          width: 20px;
+          height: 20px;
+          background-size: contain;
+          position: absolute;
+          right: 10px;
+          top: 10px;
+        }
+      }
+      &#roof-type {
+        margin-bottom: 15px;
+      }
+    }
+    select {
+      background: url("../images/dropdown-arrow.svg") no-repeat right
+        $light-grey;
+      -webkit-appearance: none;
+      background-position-x: 94%;
+      background-size: 12px;
+    }
+    label {
+      display: block;
+      padding-left: 20px;
+      padding-bottom: 5px;
+      font-weight: bold;
+      color: $heavy-grey;
+      @include phone {
+        padding-top: 0;
+        padding-left: 25px;
+      }
+    }
+    input.button {
+      background: white;
+      border: 2px solid $black;
+      margin: 0 auto;
+      padding: 8px 0;
+      color: $black;
+      @include border-radius(50px);
+      width: 40%;
+      text-align: center;
+      display: block;
+      @include phone {
+        width: 100%;
+        padding: 5px 0;
+        font-size: 14px;
+      }
+      &:hover {
+        background: $black;
+        color: white;
+      }
+    }
+    .radio-area {
+      input[type="radio"] {
+        width: 20px;
+      }
+      label {
+        width: 30px;
+      }
+    }
+  }
+}
+
+.success-message {
+  text-align: center;
+  .success-email-icon {
+    margin: 46px auto 0 auto;
+    width: 106px;
+    height: 73px;
+    display: inline-block;
+    background: url("../images/mail-sent.svg") no-repeat;
+    @include phone {
+      margin: 30px auto 0 auto;
+    }
+  }
+  h1 {
+    text-align: center;
+    font-size: 21px;
+    margin-bottom: 0;
+    font-weight: bold;
+  }
+  p {
+    text-align: center;
+    font-size: 15px;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  h3 {
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 0;
+  }
+  .button {
+    font-size: 15px;
+    text-align: center;
+    margin: 20px 0;
+    &.finance {
+      border: 2px solid $button-green;
+      background: $button-green;
+    }
+    @include phone {
+      margin: 20px 0 0;
+    }
+  }
+}

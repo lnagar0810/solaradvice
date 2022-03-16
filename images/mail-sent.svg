@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="106px" height="73px" viewBox="0 0 106 73" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Group 22</title>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group-22">
+            <rect id="Rectangle" x="0" y="0" width="106" height="73"></rect>
+            <polygon id="Path" fill="#4CB77C" fill-rule="nonzero" points="74.7272727 53.7313433 65.1818182 44.3283582 62 47.4626866 74.7272727 60 102 33.1343284 98.8181818 30"></polygon>
+            <g id="Group-20" transform="translate(23.000000, 16.000000)" stroke="#565656" stroke-width="3">
+                <polygon id="Path-2" stroke-linejoin="round" points="60 0 30.2222222 24.6928406 0 0"></polygon>
+                <polyline id="Path-3" points="60 20 60 0 0 0 0 40 36.9037018 40"></polyline>
+            </g>
+        </g>
+    </g>
+</svg>

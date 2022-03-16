@@ -1,0 +1,86 @@
+$font-family: "Lato", "Helvetica Neue", Helvetica, sans-serif;
+$site-link-color: #1d639e;
+$bg-grey: #f8f8f8;
+$light-grey: #f6f6f6;
+$medium-grey: #cccccc;
+$input-grey: $light-grey;
+$grey: #d8d8d8;
+$black: #151515;
+$blue: #1e639e;
+$border-grey: #dad9d9;
+$heavy-grey: #404040;
+$input-grey: $light-grey;
+$red: #ea2626;
+$orange: #e78018;
+$light-orange: #fcb670;
+$faint-orange: #fff4d7;
+$green: #417505;
+$button-green: #009d90;
+$pastel-green: #a5da6b;
+$pale-bg-blue: #ecf5fa;
+$form-text: 15px;
+
+@mixin large-desktop {
+  @media (min-width: 1200px) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: 1024px) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin fablet {
+  @media (max-width: 600px) {
+    @content;
+  }
+}
+
+@mixin landscape-phone {
+  @media (max-width: 440px) {
+    @content;
+  }
+}
+
+@mixin phone {
+  @media (max-width: 420px) {
+    @content;
+  }
+}
+@mixin flexbox() {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+@mixin box-shadow($style) {
+  box-shadow: $style;
+  -webkit-box-shadow: $style;
+  -moz-box-shadow: $style;
+}
+@mixin transition-box-shadow($style) {
+  -webkit-transition: -webkit-box-shadow $style;
+  -ms-transition: box-shadow $style;
+  transition: box-shadow $style;
+}
+@mixin border-radius($px) {
+  border-radius: $px;
+  -webkit-border-radius: $px;
+  -moz-border-radius: $px;
+}
+
+@mixin clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
