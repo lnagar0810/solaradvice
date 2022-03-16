@@ -26,7 +26,7 @@
  */
 
  if ( ! defined( 'WPINC' ) ) {
-	die;
+    die;
 }
 
 define( 'PLUGIN_VERSION', '1.0.8' );
@@ -255,6 +255,11 @@ function solaradice_order_edit_shipping_cost_details($order_id){
     $order = wc_get_order($order_id);;
     $solaradice_shipping = $order->get_meta('solaradice_shipping');
     $label = __( 'Shipping', 'woocommerce' );
+
+    if($solaradice_shipping['shipping']){
+        return;
+    }
+
     $shpping_cost = array_sum(array_column($solaradice_shipping['shipping'],'cost'));
 
     if($shpping_cost){
